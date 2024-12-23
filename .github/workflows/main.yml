@@ -1,0 +1,15 @@
+name: firstproject
+on: workflow_dispatch
+jobs:
+   first:
+     runs-on: ubuntu-lates
+     steps:
+          - name: This is my first code
+            run: echo "Hello"
+          - name: checkout branch
+            uses: actions/checkout@v3
+          - name: get PWD
+            run: pwd
+          - name: get ls
+            run: ls
+     
