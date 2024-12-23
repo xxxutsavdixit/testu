@@ -1,7 +1,7 @@
 name: My first project
 on: workflow_dispatch
 jobs:
-   firstjob
+   firstjob:
     runs-on: ubuntu-latest
     steps:
       - name: print hello
