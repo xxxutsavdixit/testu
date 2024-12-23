@@ -2,7 +2,7 @@ name: firstproject
 on: workflow_dispatch
 jobs:
    first:
-     runs-on: ubuntu-lates
+     runs-on: ubuntu-latest
      steps:
           - name: This is my first code
             run: echo "Hello"
