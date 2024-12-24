@@ -17,4 +17,12 @@ jobs:
             uses: actions/setup-node@v3
             with:
               node-version: '16.18.0'
-     
+   second:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello
+        run: echo "HELLO"
+      - name: pull the code
+        uses: actions/checkout@v3
+      - name: print teh current WD
+        run: ls     
