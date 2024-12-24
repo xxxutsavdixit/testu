@@ -18,6 +18,7 @@ jobs:
             with:
               node-version: '16.18.0'
    second:
+    needs: first
     runs-on: ubuntu-latest
     steps:
       - name: print hello
