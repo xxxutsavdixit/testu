@@ -12,4 +12,9 @@ jobs:
             run: pwd
           - name: get ls
             run: ls
+          # Step 2: Set up Node.js
+          - name: Set up Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: '16.18.0'
      
