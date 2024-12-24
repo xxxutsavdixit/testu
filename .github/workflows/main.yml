@@ -24,7 +24,7 @@ jobs:
       - name: print hello
         run: echo "HELLO"
       - name: get github action context
-        run: echo "${{toJson(github)}}"
+        run: echo "${{toJson(github.event.ref)}}"
       - name: pull the code
         uses: actions/checkout@v3
       - name: print teh current WD
