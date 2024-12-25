@@ -27,8 +27,6 @@ jobs:
         run: echo "${{toJson(github.event.ref)}}"
       - name: print only branch name
         run: echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
-      
-      - name: priont file
       - name: pull the code
         uses: actions/checkout@v3
       - name: print teh current WD
