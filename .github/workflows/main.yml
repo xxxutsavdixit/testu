@@ -25,8 +25,6 @@ jobs:
         run: echo "HELLO"
       - name: get github action context
         run: BRANCH_NAME=$(echo "${{toJson(github.event.ref)}}"   | awk -F'/' '{print $NF}')
-      - name: print hello
-        run: echo $BRANCH_NAME
       - name: pull the code
         uses: actions/checkout@v3
       - name: print teh current WD
