@@ -1,7 +1,7 @@
 name: firstproject
 on: workflow_dispatch
 env:
-   mypass: ${{ secret.MYPASS}}
+   mypass: ${{ secrets.MYPASS}}
 jobs:
    first:
      runs-on: ubuntu-latest
