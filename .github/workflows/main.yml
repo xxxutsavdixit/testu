@@ -9,4 +9,7 @@ jobs:
           - name: This is my first code
             run: echo "${{env.mypass}}" >> y1.yaml
 
+          - name: This is my first code
+            run: cat y1.yaml
+
  
