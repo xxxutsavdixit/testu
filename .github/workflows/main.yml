@@ -1,16 +1,12 @@
 name: firstproject
 on: workflow_dispatch
 env:
-   mypass: utsav
+   mypass: ${{ secret.MYPASS}}
 jobs:
    first:
      runs-on: ubuntu-latest
      steps:
           - name: This is my first code
             run: echo "${{env.mypass}}"
-          - name:  print the values in a file
-            run: "${{env.mypass}}"  >>   y1.yaml
-          - name: what is in file y1.yaml
-            run: cat y1.yaml
 
  
