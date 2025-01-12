@@ -1,36 +1,12 @@
 name: firstproject
 on: workflow_dispatch
+env:
+   mypass: utsav
 jobs:
    first:
      runs-on: ubuntu-latest
      steps:
           - name: This is my first code
-            run: echo "Hello"
-          - name: checkout branch
-            uses: actions/checkout@v3
-          - name: get PWD
-            run: pwd
-          - name: get ls
-            run: ls
-          # Step 2: Set up Node.js
-          - name: Set up Node.js
-            uses: actions/setup-node@v3
-            with:
-              node-version: '16.18.0'
-   second:
-    needs: first
-    runs-on: ubuntu-latest
-    steps:
-      - name: print hello
-        run: echo "HELLO"
-      - name: get github action context
-        run: |
-             REF_NAME=$(echo "${{toJson(github.event.ref)}}"   | awk -F'/' '{print $NF}')
-             echo "BRANCH_NAME=$REF_NAME" >> $GITHUB_ENV
-   # Use the extracted branch name in subsequent steps
-      - name: Print Extracted Branch Name
-        run: echo "Branch name is $BRANCH_NAME"       
-      - name: pull the code
-        uses: actions/checkout@v3
-      - name: print teh current WD
-        run: ls     
+            run: echo "${{env.mypass}}"
+
+ 
