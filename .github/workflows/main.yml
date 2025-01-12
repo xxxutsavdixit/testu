@@ -7,6 +7,6 @@ jobs:
      runs-on: ubuntu-latest
      steps:
           - name: This is my first code
-            run: echo "${{env.mypass}}"
+            run: echo "${{env.mypass}}" >> y1.yaml
 
  
